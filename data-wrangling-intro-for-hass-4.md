@@ -143,3 +143,7 @@ Create a new text facet for the column `Local_Police_Region`. You should see s
 To remove the whitespace, choose `Edit cells > Common transforms > Trim leading and trailing whitespace`.
 
 You should now see only five choices in your text facet.
+
+[Go to the next part of the lesson](data-wrangling-intro-for-hass-5.md).
+
+[Go to the previous part of the lesson](data-wrangling-intro-for-hass-3.md).
