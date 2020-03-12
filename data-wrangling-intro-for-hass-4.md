@@ -1,8 +1,8 @@
 # Facets & Clustering – Common transformations
 
-*Teaching:* 10 min
+*Teaching:* 10 min.
 
-*Exercises:* 10 min
+*Exercises:* 10 min.
 
 ## Objectives
 
