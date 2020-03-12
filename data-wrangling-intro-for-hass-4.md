@@ -105,19 +105,19 @@ As well as 'Text facets' and 'timeline facets', OpenRefine also supports other t
 
 - Scatterplot facets
 
-**Numeric** and **Scatterplot** facets display graphs instead of lists of values. The numeric facet graph includes 'drag and drop' controls you can use to set a start and end range to filter the data displayed. These facets are explored further in Examining Numbers in OpenRefine.
+> **Numeric** and **Scatterplot** facets display graphs instead of lists of values. The numeric facet graph includes 'drag and drop' controls you can use to set a start and end range to filter the data displayed. These facets are explored further in Examining Numbers in OpenRefine.
 
-**Custom** facets provide a range of different facets. Some of the default custom facets are: (SHOW MENU)
+> **Custom** facets provide a range of different facets. Some of the default custom facets are: (SHOW MENU)
 
-**Word** facet - this breaks down text into words and counts the number of records each word appears in
+> **Word** facet - this breaks down text into words and counts the number of records each word appears in
 
-**Duplicates** facet - this results in a binary facet of 'true' or 'false'. Rows appear in the 'tru' facet if the value in the selected column is an exact match for a value in the same column in another row.
+> **Duplicates** facet - this results in a binary facet of 'true' or 'false'. Rows appear in the 'tru' facet if the value in the selected column is an exact match for a value in the same column in another row.
 
-**Text length** facet - creates a numeric facet based on the length (number of characters) of the text in each row for the selected column. This can be useful for spotting incorrect or unusual data in a field where specific lengths are expected (e.g., if the values are expected to be years, any row with a text length of more than 4 for that column is likely to be incorrect.)
+> **Text length** facet - creates a numeric facet based on the length (number of characters) of the text in each row for the selected column. This can be useful for spotting incorrect or unusual data in a field where specific lengths are expected (e.g., if the values are expected to be years, any row with a text length of more than 4 for that column is likely to be incorrect.)
 
-**Facet by blank** - a binary facet of 'true' or 'false'. Rows appear in the 'true' facet if they have no data present in that column. This is useful when looking for missing data.
+> **Facet by blank** - a binary facet of 'true' or 'false'. Rows appear in the 'true' facet if they have no data present in that column. This is useful when looking for missing data.
 
-#### Exercise:  Using Facets find what data is missing in Crash_Type column
+#### Exercise:  Using Facets find what data is missing in `Crash_Type` column
 
 Work with your neighbour to find out how many records are missing crash type data?
 
@@ -126,21 +126,20 @@ Work with your neighbour to find out how many records are missing crash type dat
 
 > Select Facet > Customized facets > Facet by Blank or Null
 
+> Result: 13. All correspond to the `Crash_Nature` type of Hit Animal, so it might be possible to identify the missing values from this information.
+
 > -------------------------------------------------
 
-Result: 13 , all correspond to the Crash_Nature type of Hit Animal, so it might be possible to identify the missing values from this information.
+### Fixing data in bulk via Common Transformations
 
-Page Break
-Fixing data in bulk via Common Transformations
+#### Trim Leading and trailing whitespace using facets
 
-Trim Leading and trailing whitespace using facets
+Words with spaces at the beginning or end are particularly hard for we humans to tell from strings, but the blank characters will make a difference to the computer. We usually want to remove these at the beginning of a project.  OpenRefine provides a tool to remove blank characters from the beginning and end of any entries that have them.
 
-Words with spaces at the beginning or end are particularly hard for we humans to tell from strings without, but the blank characters will make a difference to the computer. We usually want to remove these at the beginning of a project.  OpenRefine provides a tool to remove blank characters from the beginning and end of any entries that have them.
+#### Activity 9 – Common transformations
 
-Activity 9 – Common transformations
+Create a new text facet for the column `Local_Police_Region`. You should see some choices that appear identical (Central and South Eastern have two choices). One of these choices must include either leading or trailing whitespace.
 
-Create a new text facet for the column Local_Police_Region. You should see some choices that appear identical (Central and South Eastern have two choices). One of these choices must include either leading or trailing whitespace.
-
-To remove the whitespace, choose Edit cells > Common transforms > Trim leading and trailing whitespace.
+To remove the whitespace, choose `Edit cells > Common transforms > Trim leading and trailing whitespace`.
 
 You should now see only five choices in your text facet.
