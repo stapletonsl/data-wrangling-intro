@@ -1,6 +1,7 @@
 ## Filtering and Sorting with OpenRefine
 
 *Teaching:* 10 minutes.
+
 *Exercises:* 10 minutes.
 
 ### Objectives
