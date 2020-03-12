@@ -1,8 +1,8 @@
 # Facets & Clustering – Common transformations
 
-*Teaching:* ? min
+*Teaching:* 10 min
 
-*Exercises:* 0? min
+*Exercises:* 10 min
 
 ## Objectives
 
@@ -39,11 +39,15 @@ along with a number representing how many times that value occurs in the column.
 
 2. Which months have the highest and lowest traffic related accidents?
 
-#### Solution
+> -------------------
 
-1. Name is alphabetical, and count is largest at top of list.
+> #### Solution
 
-2. May highest, January lowest.
+> 1. Name is alphabetical, and count is largest at top of list.
+
+> 2. May highest, January lowest.
+
+> -------------------------
 
 Close facet by clicking the `x` in top corner of the Facet panel. Always close facets when you are finished with them,
 so as not to affect future facets.
@@ -91,37 +95,38 @@ How many days of the week are represented now?
 
 Close facet
 
-More on Facets
+### More on Facets
 
-As well as ‘Text facets’ and ‘timeline facets’ OpenRefine also supports a range of other types of facet. These include:
+As well as 'Text facets' and 'timeline facets', OpenRefine also supports other types of facet. These include:
 
-Numeric facets
+- Numeric facets
 
-Custom facets (for numbers)
+- Custom facets (for numbers)
 
-Scatterplot facets
+- Scatterplot facets
 
-Numeric and Scatterplot facets display graphs instead of lists of values. The numeric facet graph includes ‘drag and drop’ controls you can use to set a start and end range to filter the data displayed. These facets are explored further in Examining Numbers in OpenRefine
+**Numeric** and **Scatterplot** facets display graphs instead of lists of values. The numeric facet graph includes 'drag and drop' controls you can use to set a start and end range to filter the data displayed. These facets are explored further in Examining Numbers in OpenRefine.
 
-Custom facets are a range of different types of facets. Some of the default custom facets are: (SHOW MENU)
+**Custom** facets provide a range of different facets. Some of the default custom facets are: (SHOW MENU)
 
-Word facet - this breaks down text into words and counts the number of records each word appears in
+**Word** facet - this breaks down text into words and counts the number of records each word appears in
 
-Duplicates facet - this results in a binary facet of ‘true’ or ‘false’. Rows appear in the ‘true’ facet if the value in the selected column is an exact match for a value in the same column in another row
+**Duplicates** facet - this results in a binary facet of 'true' or 'false'. Rows appear in the 'tru' facet if the value in the selected column is an exact match for a value in the same column in another row.
 
-Text length facet - creates a numeric facet based on the length (number of characters) of the text in each row for the selected column. This can be useful for spotting incorrect or unusual data in a field where specific lengths are expected (e.g. if the values are expected to be years, any row with a text length more than 4 for that column is likely to be incorrect)
+**Text length** facet - creates a numeric facet based on the length (number of characters) of the text in each row for the selected column. This can be useful for spotting incorrect or unusual data in a field where specific lengths are expected (e.g., if the values are expected to be years, any row with a text length of more than 4 for that column is likely to be incorrect.)
 
-Facet by blank - a binary facet of ‘true’ or ‘false’. Rows appear in the ‘true’ facet if they have no data present in that column. This is useful when looking for rows missing key data.
+**Facet by blank** - a binary facet of 'true' or 'false'. Rows appear in the 'true' facet if they have no data present in that column. This is useful when looking for missing data.
 
-Exercise:  work with your neighbour to find out…..
+#### Exercise:  Using Facets find what data is missing in Crash_Type column
 
-Using Facets find what data is missing in Crash_Type column
+Work with your neighbour to find out how many records are missing crash type data?
 
-How many records are missing crash type data?
+> -----------------------------
+> #### Solution
 
-Solution
+> Select Facet > Customized facets > Facet by Blank or Null
 
-Select Facet > Customized facets > Facet by Blank or Null
+> -------------------------------------------------
 
 Result: 13 , all correspond to the Crash_Nature type of Hit Animal, so it might be possible to identify the missing values from this information.
 
