@@ -1,33 +1,125 @@
-### Using clustering to detect possible typing errors
+## Filtering and Sorting with OpenRefine
 
-Another very useful feature of OpenRefine is Clustering.  In OpenRefine, clustering means 'finding groups of different values that might be alternative representations of the same thing'. For example, the text strings 'New York', 'new york'  or 'New Yrok' (write on board) very likely refer to the same concept.
+*Teaching:* 10 minutes.
+*Exercises:* 10 minutes.
 
-Clustering is a very powerful tool for identifying and fixing datasets which contain misspelled or mistyped entries.
+### Objectives
 
-OpenRefine has several clustering algorithms built in. Let's experiment with them.
+#### Work on a subset of data by filtering
 
-#### Activity 10 – Fixing errors via Clustering
+There are many records in our dataset. We can filter them to work on a subset. In this exercise, we want to filter by a word within the text values of a column.
 
-Create a Text Facet for `Crash_Nature`, scroll through the list.  You will notice a number of values  that are likely mis-typed entries due to various factors.  (Ask for examples and reward with prizes).
+#### Activity 11: work on a subset of data by filtering
 
-Click the `Cluster` button, on the top right of the facet.
+Click the down arrow next to `Suburb_PostCode > Text filter`. A filter box will appear in the left margin.
 
-In the resulting pop-up window, different edit options and algorithms are available via drop down boxes.
+Type in heights and press return. There are 208 matching rows of the original 27528 rows (and these rows are selected for the subsequent steps).
 
-Select the `key collision` method and `fingerprint` keying function. It should identify one cluster with 3 value options.
+#### Exercise: Limit the results to one of the suburbs with 'Heights' in the name.
 
-Click the `Merge?` box beside the cluster, then click `Merge Selected and Re-cluster` to apply the corrections to the dataset.
+Work with your neighbour to find out.
 
-Try selecting different Methods and Keying Functions combinations, to see if new merges are suggested.
+There are a couple of possibilities.
 
-There may be a few more clusters, to fix misspellings, typos, capitalisation, hyphens, etc.
+> #### Solution
 
-How many choices are now shown in the facet?  13 (prize).
+> Do `Facet > Text facet` on the `Suburb_PostCode` column after filtering.
 
-Close the facet.
+> This will show 20 suburbs with names that match your filter.
 
-*Important: Some merges are not necessary. Nearest neighbour with a radius of 2.0 with find Struck by external load with Struck by internal load.  These are valid variables, do not merge these.*
+> To restrict to only one of these suburbs, select one to include.
 
-### Different clustering algorithms
+Faceting and filtering look very similar. A good distinction is that faceting gives you an overview, description and count of all of the data that is currently selected, while filtering allows you to select a subset of your data by a string - of text in this case - for analysis or cleaning.
 
-Detailed information on the different clustering algorithms and combinations is available here: [https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth).
+### Sorting data
+
+Using `Crash_Street`, let's explore data together in another way, using sorting.
+
+You can sort data in a column by selecting drop-down menu and `Sort`.  Options include
+
+- sort by text
+- sort by numbers
+- sort by dates
+- sort by booleans (TRUE or FALSE values). 
+
+You can also specify what order to put Blanks and Errors in the sorted results.
+
+If this is your first time sorting this table, then the drop-down menu for the selected column shows Sort ... Select what you would like to sort by (such as text). Additional options will then appear for you to fine-tune your sorting.
+
+If you try to re-sort a column that you have already used, the drop-down menu changes slightly, to > Sort without the ..., to remind you that you have already used this column. It will give you additional options:
+
+- Sort > Sort ... - This option enables you to modify your original sort.
+
+- Sort > Reverse - This option allows you to reverse the order of the sort.
+
+- Sort > Remove sort - This option allows you to undo your sort.
+
+### Sorting by multiple columns
+
+You can also sort by multiple columns and this makes it easier to explore data easily before analysis and processing.   We can sort by multiple columns by performing sort on additional columns.
+
+The sort will depend on the order in which you select columns to sort.
+
+To restart the sorting process with a specific column, check the sort by this column alone box in the Sort pop-up menu.
+
+If you go back to one of the already sorted columns and select Sort > Remove sort, that column is removed from your multiple sort. If it is the only column sorted, then data reverts to its original order.
+
+#### Activity 12: sorting by multiple columns
+
+Sort `Crash_Street` again, select Sort... > text and a-z
+
+Add an additional sort by `Crash_Street_Intersection`, select Sort... > text and a-z
+
+Examine the first page of results for multiple accidents at the same location
+
+Remove sort.
+
+Sorts in OpenRefine are temporary. If you remove the Sort, the data will go back to its original unordered state.
+
+The Sort drop-down menu at the top of the screen also lets you amend the existing sort (e.g. reverse the sort order), remove existing sorts, and/or make sorts permanent.
+
+#### Activity 13
+
+Sort the data by `Crash_Longitude` by number. What are the results?
+
+> ---------
+> Solution
+
+> In the Crash_Longitude column, select Sort... > numbers and select smallest first and reposition Errors & Blanks to the top of the column.
+
+> The first value is missing, from record 243929.
+
+> ----------
+
+### Find the missing value
+
+We want to map this data later, so it is important to have complete latitude and longitude information.  We may be able to identify the missing value by other variable attributes.  When you know your data or look at the variable in context with other similar observations you can identify what type of data problem might be occurring and possible solutions.  In this case, we could search other variables such as Crash_Street , Crash_Street_Intersection and Suburb_PostCode to identify similar locations.
+
+#### Exercise:  now that we know about sorting, filtering and faceting work with your neighbour to
+
+Find the missing Crash_Longitude value for record 243929. There are a few possibilities.
+
+*Hint:* my first step is to:
+
+Write down the values in the columns Crash_Street , Crash_Street_Intersection and Suburb_PostCode, for record 243929
+
+>------
+
+> Solution
+
+> Values are: Mary St; Miles St; Mount Isa City, (4825);
+
+
+Remove the sort.
+
+Filter `Crash_Street` by Mary.
+
+Filter `Crash_Street_Intersection` by Miles St.
+
+Examine results for similarities.
+
+Copy and paste `Crash_Longitude` value to the record missing the value.
+
+### Key Points
+
+OpenRefine provides a way to sort and filter data without affecting or changing the raw data.
