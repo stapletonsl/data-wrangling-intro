@@ -1,47 +1,49 @@
-Examining Numbers in OpenRefine
+# Examining Numbers in OpenRefine
 
-Teaching: ? min
-Exercises: 0? min
+*Teaching:* 10 minutes.
 
-Objectives
+*Exercises:* 15 minutes.
 
+## Objectives
 
-
-Let’s explore what we can do with numbers.
-
-Numbers
+Let's explore what we can do with numbers.
 
 When a table is imported into OpenRefine, all data is formatted as text. We saw earlier how we can sort column values as numbers, but this does not change the data type in a column from text to numbers. Rather, this interprets the values as numbers for the purposes of sorting but keeps the underlying data type as is.
 
-We can, however, transform columns to other data types (e.g. number or date) using the Edit cells > Common transforms feature. Here we will experiment changing columns to numbers and see what additional capabilities that grants us.
+We can, however, transform columns to other data types (e.g., number or date) using the `Edit cells > Common transforms` feature. Here we will experiment changing columns to numbers and see what additional capabilities that gives us.
 
-Be sure to remove any facets you have enabled from the left panel so that we can examine our whole dataset. You can remove an existing facet by clicking the x in the upper left of that facet window.
+Be sure to close any facets you have enabled from the left panel before this step, so that we can be sure we are working on the complete dataset. You can close an existing facet by clicking the `x` in the upper left of that facet window.
 
-Activity 23
+#### Activity 23
 
-To transform cells in Crash_Hour column to numbers:
+To transform cells in the `Crash_Hour` column to numbers:
 
-Click the down arrow for that column
+- Click the down arrow for the `Crash_Hour` column
 
-then Edit cells > Common transforms… > To number
+- Select `Edit cells > Common transforms ... ` and chose the option `number`
 
-The Crash_Hour values change from left-justified to right-justified, and black to green in colour.
+The `Crash_Hour` values change from left-justified to right-justified, and from black to green in colour.
 
+#### Numeric facets
 
+Sometimes there are non-number values or blanks in a column which may represent errors in data entry. We can find these by using a **numeric** facet.
 
-Numeric facets
+#### Activity 24
 
-Sometimes there are non-number values or blanks in a column which may represent errors in data entry. We can find these with a Numeric facet.
+- Go to the `Postcode` column which was transformed to numbers.
 
-Activity 24
+- Edit a few cells, replacing the numbers with text, such as "abc", and make a few other cells blank.
 
-Go to Postcode column which was transformed to numbers
+- Apply a numeric facet to the column you edited.
 
-Edit a few cells, replacing the numbers with text, such as “abc”, and make other cells blank
+Notice that there are several checkboxes in this facet: 
 
-Apply a numeric facet to the column you edited
+- Numeric
+- Non-numeric
+- Blank
+- Error. 
 
-Notice that there are several checkboxes in this facet: Numeric, Non-numeric, Blank, and Error. Below these are counts of the number of cells in each category. You should see checks for Non-numeric and Blank if you changed some values.
+Below these are counts of the number of cells in each category. You should see checks for Non-numeric and Blank if you changed some values.
 
 Experiment with checking or unchecking these boxes to select subsets of your data.
 
@@ -219,8 +221,12 @@ https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program
 
 
 
-Going Further
+### Going Further
 
 Look at the other options on the Import screen - try changing some of these options and see how that changes the Preview and how the data appears after import.
 
 Do you have access to JSON or XML data? If so the first stage of the import process will prompt you to select a ‘record path’ - that is the parts of the file that will form the data rows in the OpenRefine project. I have used this process with an xml file of a university’s records from Research Data Australia.
+
+
+[Go to the previous part of the lesson](data-wrangling-intro-for-hass-6.md).
+[Go back to the start](data-wrangling-intro-for-hass-1.md).
