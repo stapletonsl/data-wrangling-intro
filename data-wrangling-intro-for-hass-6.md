@@ -1,35 +1,33 @@
-Transforming data using GREL (General Refine Expression Language)
+# Transforming data using GREL (General Refine Expression Language)
 
-Teaching: ? min
-Exercises: 0? min
+*Teaching:* 15 minutes
+*Exercises:8 15 minutes
 
-Objectives
-
-
+## Objectives
 
 Transformations in OpenRefine enable manipulations of data in columns. Such types of changes include:
 
-Splitting data from a single column into multiple columns (e.g. splitting an address into multiple parts) to enable tidy data – one variable per column.
+- Splitting data from a single column into multiple columns (e.g., splitting an address into multiple parts) to enable tidy data – one variable per column.
 
-Standardising the format of data in a column without changing the values (e.g. removing punctuation or standardising a date format)
+- Standardising the format of data in a column without changing the values (e.g., removing punctuation or standardising a date format)
 
-Extracting data from a longer text string (e.g. finding DOIs in a bibliographic citation)
+- Extracting data from a longer text string (e.g., finding DOIs within a bibliographic citation)
 
-It is difficult to read, ingest and process data which has multiple values in the one cell.  OpenRefine has methods for transforming text into formats which enable splitting values into multiple cells.
+It can be difficult to read, ingest and process data which has multiple values within the one cell.  OpenRefine has methods to split those values into multiple cells or columns. OpenRefine has several ways to do this. 
 
-We will explore a few possible methods to do this. The first of these is using a language GREL.  GREL stands for General Refine Expression Language. GREL expressions are a little like Excel Formula, although they tend to focus on text manipulations rather than numeric functions.
+First we will split data using the in-built programming capabilities of GREL within OpenRefine.  GREL stands for **General Refine Expression Language**. GREL expressions are a little like Excel formulae, although they tend to focus on text manipulations rather than numeric functions.
 
-The data in the Suburb_PostCode column has more than one value in each cell. The values include the suburb name and a postcode inside brackets. This is difficult to process and analyse and needs splitting to make the data tidy.  Before we can split the values into individual columns, we first need to remove the extra characters such as brackets and whitespace.
+The data in the `Suburb_PostCode` column has more than one value in each cell. The values include the suburb name and a postcode inside brackets. This is difficult to process and analyse and needs splitting to make the data tidy. Before we can split the values into individual columns, we first need to remove the extra characters such as brackets and leading (or trailing) whitespace.
 
-Activity 14: transforming data using GREL
+#### Activity 14: transforming data using GREL
 
-We are going to remove all the extra characters with a GREL command value.replace.
+We are going to remove all the extra characters by using the GREL command `value.replace`.
 
-(Write command on board :  value.replace) and explain
+`Value.replace` is the command. What needs to be added to make it work are first *what* needs to be replaced, and then *what it needs to be replaced with*.
 
-Click the down arrow at the top of the Suburb_PostCode column.
+Click the down arrow at the top of the `Suburb_PostCode` column.
 
-Select Edit Cells > Transform...    This will open a window to type a GREL expression.
+Select `Edit Cells > Transform ...`    This will open a window in which you can enter a GREL expression. An expression is a combination of the command you will being using, and the arguments you will be using to modify the command, i.e. the values that will be changed.
 
 In the Expression box type value.replace("(", "")  to remove all left brackets “(“
 
