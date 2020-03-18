@@ -1,7 +1,8 @@
 # Transforming data using GREL (General Refine Expression Language)
 
 *Teaching:* 15 minutes
-*Exercises:8 15 minutes
+
+*Exercises:* 15 minutes
 
 ## Objectives
 
@@ -23,87 +24,69 @@ The data in the `Suburb_PostCode` column has more than one value in each cel
 
 We are going to remove all the extra characters by using the GREL command `value.replace`.
 
-`Value.replace` is the command. What needs to be added to make it work are first *what* needs to be replaced, and then *what it needs to be replaced with*.
+`Value.replace` is the command. What needs to be added to make the command work are what are called *arguments* in programming speak. In this case, the arguments are the values of *what* needs to be replaced, and then *what it needs to be replaced with*.
 
 Click the down arrow at the top of the `Suburb_PostCode` column.
 
-Select `Edit Cells > Transform ...`    This will open a window in which you can enter a GREL expression. An expression is a combination of the command you will being using, and the arguments you will be using to modify the command, i.e. the values that will be changed.
+Select `Edit Cells > Transform ...`    This will open a window in which you can enter a GREL expression. An expression is a combination of the command you will be using, plus the arguments you will be using to modify the command, i.e. the values that will be changed.
 
-In the Expression box type value.replace("(", "")  to remove all left brackets “(“
+In the Expression box, type `value.replace("(","")` to remove all left brackets by replacing them with nothing.
 
-Look at the Preview screen to see what is occurring
+The syntax is `command`, then, within round brackets, the value being replaced inside quote marks, then a comma, and then the value it is being replaced with, also inside quote marks. In this case, the second value is empty since we want to remove the bracket, i.e. replace the bracket with nothing. You do not need to add any spaces within the expression. If you do, and they appear inside the quote marks, they will be added or removed, depending on where they appear.
 
-Click OK.
+You can use single or double quotes when forming expressions - what matters is that sets must match, i.e. if you start with a double quite, you must close with a double quote. 
 
-This expression means: In each cell in the selected column, replace all the values “(” with “” (i.e. nothing - delete).
+The **Preview** screen will display on the left the cell value as it is before transformation, and on the right, what the value will be after the expression has run. This allows you to correct any errors in writing the expression, e.g., adding spaces where they are not needed, using unmatching quote marks. Click OK.
 
+The `Suburb_PostCode` column should now contain no left brackets.
 
+#### Activity 15: Remove another character
 
+Use the strategy above to remove the right-hand bracket (")") from the `Suburb_PostCode` column.
 
+`value.replace(")","")` )
 
+> #### Solution
 
+> `value.replace(")","")` )
 
+It is easy to re-use GREL expressions, as OpenRefine provides a history of commands. You can select them and reuse as is or make changes. Let's try this with the remainder of the extraneous characters in the `Suburb_PostCode` column. We want only to have a separator left between our two values in each cell.  The comma is the separator in this variable.
 
+#### Activity 16: Repeat transformation steps by using History
 
+At `Suburb_PostCode` column, select `Edit cells > Transform ...`
 
+- Click the **History** tab
+- Click on the first **Reuse** option
+- Click inside the expression box, change character `")",` to `"(",`
+- Preview to check correctness
+- Click OK.
 
+Repeat steps 1 to 3 above.
 
+- Click inside the Expression box to change comma & space character ", " to comma no space ","
+- Preview to check correctness
+- Click OK.
 
+> #### Question (prize)
 
+> Why did we need to include the comma in our GREL expression, rather than just remove the white space?
 
+> *Answer:* There are spaces between multi-word suburb names and these would have been affected if whitespace alone had been removed. By specifyinh whitepsace with the comma, only the appropriate values will have been changed. 
 
+Now that we have cleaned out extraneous characters from our `Suburb_PostCode` column, we can explore the data and see which postcodes were the most or least prominent traffic crash locations.
 
-The Suburb_PostCode column should now contain no left parentheses.
-Page Break
-Activity 15: Remove another character
-
-Use the strategy above to remove the right-hand bracket ()) from the Suburb_PostCode column.
-
- (write value.replace(“)“, “”) on white board, with different colours to illustrate)
-
-Solution
-
- value.replace(")", "") to remove )
-
-There is quick method to reuse GREL expressions, as OpenRefine provides a history of commands. You can select them and reuse as is or make changes. Let’s try this with the remainder of the extraneous characters in the Suburb_PostCode  column. We want only to have a separator left between our two values in each cell.  The comma is the separator in this variable.
-
-Activity 16: Repeat transformation steps by using History
-
-At Suburb_PostCode  column Edit cells > transform
-
-click the History tab
-
-click on the first Reuse option
-
-click inside the expression box, change character “)”, to “(”,
-
-preview and ok
-
-repeat steps 1 to 3 above
-
-click inside the expression box to change comma & space character“, “ to comma no space “,”
-
-preview and ok
-
-Question (prize)
-
-Why did we need to include the comma in our GREL expression, rather than just remove the white space?
-
-As there are spaces between multi word suburb names and these would have been affected if removing whitespace without the comma.
-
-Now that we have cleaned out extraneous characters from our Suburb_PostCode column, we can  explore the data and see which postcodes were the most or least prominent traffic crash locations.
-
-Splitting cells
+### Splitting cells
 
 Splitting multi-valued cells will enable faceting by text. This is also useful for splitting full names in first and last name columns and more.
 
-Activity 17
+#### Activity 17
 
-Click down arrow at the top of the Suburb_PostCode column.
+Click down arrow at the top of the `Suburb_PostCode` column.
 
-Choose Edit cells > Split multi-valued cells
+Choose `Edit cells > Split multi-valued cells`
 
-At the separator Expression box check the correct separator is used
+At the separator Expression box, check that the correct separator, i.e. a comma, is specified.
 
 Click OK.
 
