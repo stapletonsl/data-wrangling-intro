@@ -30,11 +30,11 @@ Click the down arrow at the top of the `Suburb_PostCode` column.
 
 Select `Edit Cells > Transform ...`    This will open a window in which you can enter a GREL expression. An expression is a combination of the command you will be using, plus the arguments you will be using to modify the command, i.e. the values that will be changed.
 
-In the Expression box, type `value.replace("(","")` to remove all left brackets by replacing them with nothing.
+In the Expression box, type ``value.replace("(", "")` to remove all left brackets by replacing them with nothing.
 
-The syntax is `command`, then, within round brackets, the value being replaced inside quote marks, then a comma, and then the value it is being replaced with, also inside quote marks. In this case, the second value is empty since we want to remove the bracket, i.e. replace the bracket with nothing. You do not need to add any spaces within the expression. If you do, and they appear inside the quote marks, they will be added or removed, depending on where they appear.
+The syntax is `command`, then, within round brackets, the value being replaced inside quote marks, then a comma, and then the value it is being replaced with, also inside quote marks. In this case, the second value is empty since we want to remove the bracket, i.e. replace the bracket with nothing. You do not need to add any spaces within the expression. If you do, and they appear inside the quote marks, they will be added or removed, depending on within which set of values they appear.
 
-You can use single or double quotes when forming expressions - what matters is that sets must match, i.e. if you start with a double quite, you must close with a double quote. 
+You can use single or double quotes when forming expressions - what matters is that sets must match, i.e. if you start with a double quote, you must close with a double quote. 
 
 The **Preview** screen will display on the left the cell value as it is before transformation, and on the right, what the value will be after the expression has run. This allows you to correct any errors in writing the expression, e.g., adding spaces where they are not needed, using unmatching quote marks. Click OK.
 
@@ -44,11 +44,11 @@ The `Suburb_PostCode` column should now contain no left brackets.
 
 Use the strategy above to remove the right-hand bracket (")") from the `Suburb_PostCode` column.
 
-`value.replace(")","")` )
+``value.replace(")", "")` 
 
 > #### Solution
 
-> `value.replace(")","")` )
+> `value.replace(")", "")` )
 
 It is easy to re-use GREL expressions, as OpenRefine provides a history of commands. You can select them and reuse as is or make changes. Let's try this with the remainder of the extraneous characters in the `Suburb_PostCode` column. We want only to have a separator left between our two values in each cell.  The comma is the separator in this variable.
 
@@ -82,317 +82,86 @@ Splitting multi-valued cells will enable faceting by text. This is also useful f
 
 #### Activity 17
 
-Click down arrow at the top of the `Suburb_PostCode` column.
+- Click down arrow at the top of the `Suburb_PostCode` column.
 
-Choose `Edit cells > Split multi-valued cells`
+- Choose `Edit cells > Split multi-valued cells`
 
-At the separator Expression box, check that the correct separator, i.e. a comma, is specified.
+- At the separator Expression box, check that the correct separator, i.e. a comma, is specified.
 
-Click OK.
+- Click OK.
 
 Note that the rows are still numbered sequentially and that there are now 55056 rows, which no longer reflects one row per accident record. These are compound data objects.
 
-Click the Records option to change to Records mode and then go back to Rows.
+Click the **Records** option to change to **Records** mode and then go back to **Rows**.
 
-Note how the numbering changes as you toggle – indicating that several rows are related to the same record. This method is useful for JSON and xml files which have compound data objects.
+Note how the numbering changes as you toggle – indicating that several rows are related to the same record. This method is useful for `JSON` and `xml` files which have compound data objects.
 
-Can perform a text facet, but this is not the most efficient method.
+It would be possible to use a text facet to see this data, but this is not the most efficient method.
 
+### Undo and Redo
 
+It is common while exploring and cleaning a dataset to discover after you've made a change that you really should have done something else first. OpenRefine provides **Undo** and **Redo** operations to make this easy, no matter how far along you have gone.
 
-Undo and Redo
+#### Activity 18
 
-It’s common while exploring and cleaning a dataset to discover after you’ve made a change that you really should have done something else first. OpenRefine provides Undo and Redo operations to make this easy.
+- Click where it says `Undo / Redo` on the top left side of the screen. All the changes you have made so far are listed here.
 
-Activity 18
+- Click on the previous step, to remove the split in the cell values of `Suburb_PostCode` column.
 
-Click where it says Undo / Redo on the left side of the screen. All the changes you have made so far are listed here.
+- Visually confirm that the columns data has been re-joined.
 
-Click on the previous step, to remove the split in the cell values of Suburb_PostCode  column
+#### Activity 19
 
-Visually confirm that the columns data is re-joined
+Before moving on to the next lesson, **Undo** to the step before we first used GREL to remove all the extra characters in `Suburb_PostCode`.
 
-Activity 19
+Go back to *Facet/filter tab*.
 
-Before moving on to the next lesson:
+**Joining up GREL expression commands**
 
-Undo
+Let's perform the earlier clean up steps and customised text faceting for `Suburb_PostCode` column. We can do this more efficiently by joining up the GREL expressions.
 
-to the step before we first used GREL to remove all the extra characters in Suburb_PostCode
+#### Activity 20
 
-Go back to Facet/filter tab.
+Select `Suburb_PostCode` column.  All three cleaning steps can be performed by combining `value.replace` expressions.
 
-Joining up GREL expression commands
+- Select `Edit cells > Transform ...`
 
-Let’s perform the earlier clean up steps and customized text faceting for Suburb_PostCode column. We can do this more efficiently by joining up the GREL expressions.
+- In the Expression box, enter `value.replace("(", "").replace(")", "").replace(", ", ",")`
 
-Activity 20
+- Click Preview.
+- Click OK.
 
-Select Suburb_PostCode column.  All three cleaning steps can be performed by combining .replace statements.
+**Splitting multi value cells into multiple columns (tidy data)**
 
-Edit cells > transform
+Let's split `Suburb_PostCode` data into two columns for suburb and postcode.
 
-In the Expression box type  value.replace("(", "").replace(")", "").replace(“, “, ",")
+#### Activity 21
 
-Preview, OK
+- Select `Suburb_PostCode` column
 
-Splitting multi value cells into multiple columns (tidy data)
+- Edit `Column > Split` into several columns ...
 
-Let’s split Suburb_PostCode  data into two columns for suburb and postcode
+- Keep the Separator as a comma, and split the data into two columns
 
-Activity 21
+- Leave the *After Splitting* boxes checked
 
-Select Suburb_PostCode column
+- Click OK.
 
-Edit Column > Split into several columns….
+The original column has now been replaced with two columns holding different data.
 
-Keep the Separator as a comma, Split into 2 columns,
+A column named `Suburb_PostCode 1` contains the names of suburbs.
 
-keep the After Splitting boxes checked
+A column named `Suburb_PostCode 2` contains postcodes in green characters.  The change in colour denotes that OpenRefine has changed the underlying format of the data from "text" to "number.
 
-OK
+Let's edite the column headings to represent the data more accurately.
 
-The original column has been replaced with two columns.
+#### Activity 22
 
-A column named Suburb_PostCode 1 contains the names of suburbs
+- Go to `Suburb_PostCode 1`
 
-A column named Suburb_PostCode 2 contains postcodes in green.  The change in colour denotes that OpenRefine has changed the underlying format of the data from “text” to “number”.
+- Select `Edit Column > Rename this column` and enter `Suburb` as the new column name
 
-Let’s change the column headings to represent the data.
+- Repeat the process for `Suburb_PostCode 2` to rename the column to `Postcode`.
 
-Activity 22
 
-Go to Suburb_PostCode 1
 
-Edit Column > Rename this column to Suburb
-
-Repeat for Suburb_PostCode 2 and rename to Postcode
-Page Break
-
-
-Examining Numbers in OpenRefine
-
-Teaching: ? min
-Exercises: 0? min
-
-Objectives
-
-
-
-Let’s explore what we can do with numbers.
-
-Numbers
-
-When a table is imported into OpenRefine, all data is formatted as text. We saw earlier how we can sort column values as numbers, but this does not change the data type in a column from text to numbers. Rather, this interprets the values as numbers for the purposes of sorting but keeps the underlying data type as is.
-
-We can, however, transform columns to other data types (e.g. number or date) using the Edit cells > Common transforms feature. Here we will experiment changing columns to numbers and see what additional capabilities that grants us.
-
-Be sure to remove any facets you have enabled from the left panel so that we can examine our whole dataset. You can remove an existing facet by clicking the x in the upper left of that facet window.
-
-Activity 23
-
-To transform cells in Crash_Hour column to numbers:
-
-Click the down arrow for that column
-
-then Edit cells > Common transforms… > To number
-
-The Crash_Hour values change from left-justified to right-justified, and black to green in colour.
-
-
-
-Numeric facets
-
-Sometimes there are non-number values or blanks in a column which may represent errors in data entry. We can find these with a Numeric facet.
-
-Activity 24
-
-Go to Postcode column which was transformed to numbers
-
-Edit a few cells, replacing the numbers with text, such as “abc”, and make other cells blank
-
-Apply a numeric facet to the column you edited
-
-Notice that there are several checkboxes in this facet: Numeric, Non-numeric, Blank, and Error. Below these are counts of the number of cells in each category. You should see checks for Non-numeric and Blank if you changed some values.
-
-Experiment with checking or unchecking these boxes to select subsets of your data.
-
-When finished examining the numeric data, remove this facet by clicking the x in the upper left corner of its panel
-
-Note that this does not undo the edits you made to the cells in this column
-
-Use the Undo / Redo function to reverse these changes.
-Page Break
-
-
-Using scripts
-
-Teaching: ? min
-Exercises: 0? min
-
-Objectives
-
-
-
-How OpenRefine documents changes made to the data
-
-As you conduct your data cleaning and preliminary analysis, OpenRefine saves every change you make to the dataset. These changes are saved in a format known as JSON (JavaScript Object Notation). You can export this JSON script and apply it to other data files. If you had 20 files to clean, and they all had the same type of errors (e.g. misspellings, leading white spaces), and all files had the same column names, you could save the JSON script, open a new file to clean in OpenRefine, paste in the script and run it. This gives you a quick way to clean all your related data.
-
-Save your data wrangling work as a script
-
-Activity 25
-
-A script is a programming language that enables you to automate the execution of tasks.
-
-Open Undo / Redo tab
-
-Select Extract...
-
-Currently all operations you have made to the dataset are highlighted
-
-Select the steps that you want to apply to other datasets by clicking the check boxes.
-
-
-
-Copy the code from the right-hand panel and paste it into a text editor (like NotePad on Windows or TextEdit on Mac). Save it as a plain text file.
-In TextEdit, do this by selecting Format > Make plain text and save the file as a .txt file.
-
-Page Break
-
-
-Importing a script to use with another dataset
-
-Let’s practice running these steps on a new dataset. We’ll test this on an uncleaned version of the dataset we’ve been working with.
-
-Activity 26
-
-Create a new project in OpenRefine using the QLDtrafficAccidentsOpenDataVer1.csv dataset you downloaded at the start of the workshop (see Activity 5 for help)
-
-Give the project a different name
-
-Click the Undo / Redo tab > Apply
-
-Paste the contents of .txt file you saved.
-
-Click Perform operations.
-
-The dataset should now be the same as your other cleaned dataset.
-
-For convenience, we used the same dataset.
-
-You could use this process to clean related datasets.
-
-For example, data that you had collected over different time periods or data that was collected by different researchers (provided everyone uses the same column headings).
-
-The data in this file was generated from a database, so the column headings are pretty much guaranteed to be the same.
-
-Page Break
-
-
-Save & export data from OpenRefine
-
-Teaching: ? min
-Exercises: 0? min
-
-Objectives
-
-
-
-In OpenRefine you can save or export the cleaned data or the entire project. This means you’re saving the data and all the information about the cleaning and data transformation steps you’ve done. Once you’ve saved a project, you can open it up again and be just where you stopped before.
-
-Save
-
-By default, OpenRefine is saving your project continuously. If you close OpenRefine and open it up again, you’ll see a list of your projects. You can click on any one of them to open it up again.
-
-Export cleaned data
-
-You can export your cleaned data, with different file formats, for use in other tools for analysis.
-
-Activity 27
-
-Click Export in the top right and select the file type you want to export the data in. Tab-separated values (tsv) or Comma-separated values (csv) are good choices, as they are non-proprietary.
-
-That file will be exported to your default Download directory. That file can then be opened in a spreadsheet program or imported into programs like R or Python.
-
-Exporting a project
-
-You can also export the project files. This is helpful if you wanted to send your raw data and cleaning steps to a collaborator, or share the information as a supplement to a publication.
-
-Activity 28
-
-Click the Export button in the top right and select Export project.
-
-A tar.gz file will download to your default Download directory. Depending on your browser you may have to confirm that you want to save the file. The downloaded tar.gz file is a folder of files which have been compressed. Linux and Mac machines will have software installed to automatically expand this type of file when you double-click on it. For Windows based machines you may have to install a utility like ‘7-zip’ to expand the file and see the files in the folder.
-
-After you have expanded the file look at the files that appear in this folder. What files are here? What information do you think these files contain?
-
-Solution
-
-a history folder which contains a collection of zip files. Each of these files itself contains a change.txt file. These change.txt files are the records of each individual transformation that you did to your data.
-
-a data.zip file. When expanded, this zip file includes a file called data.txt which is a copy of your raw data. You may also see other files.
-
-
-
-Page Break
-
-
-Support and help
-
-Will send via email after workshop
-
-Set up troubleshooting
-
-Installing OpenRefine in Window OS may require two things
-
-JAVA install
-
-Move OpenRefine program folder to c:\program files
-
-Windows
-
-Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
-
-Download software version 3.2 from http://openrefine.org 
-
-Unzip the downloaded file into a directory by right-clicking and selecting “Extract…”. Name that directory something like OpenRefine.
-
-Go to your newly created OpenRefine directory.
-
-Move the folder to your c:\programs files\
-
-Launch OpenRefine
-
-Click the openrefine.exe (this will launch a command prompt window, but you can ignore that and wait for the browser to launch)
-
-If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
-
-Troubleshooting
-
-you may also need to install Java for Windows
-
-Check if your Windows is 32-bit or 64-bit help via: https://support.microsoft.com/en-au/help/15056/windows-32-64-bit-faq
-
-Select appropriate bit download
-
-(32-bit via: https://www.java.com/en/download/ 
-
-(64-bit  via:  https://www.java.com/en/download/manual.jsp  and
-
-select Windows Offline (64-bit) version
-
-Choose the folder location. Save the file to c:\program files\
-
-Close all applications including the browser.
-
-Double-click on the saved file icon to start the installation process
-
-https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program-files-x86-folder/
-
-
-
-Going Further
-
-Look at the other options on the Import screen - try changing some of these options and see how that changes the Preview and how the data appears after import.
-
-Do you have access to JSON or XML data? If so the first stage of the import process will prompt you to select a ‘record path’ - that is the parts of the file that will form the data rows in the OpenRefine project. I have used this process with an xml file of a university’s records from Research Data Australia.
