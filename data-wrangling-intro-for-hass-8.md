@@ -173,5 +173,5 @@ Look at the other options on the Import screen - try changing some of these opti
 Do you have access to JSON or XML data? If so the first stage of the import process will prompt you to select a ‘record path’ - that is the parts of the file that will form the data rows in the OpenRefine project. I have used this process with an xml file of a university’s records from Research Data Australia.
 
 
-[Go to the previous part of the lesson](data-wrangling-intro-for-hass-6.md).
+[Go to the previous part of the lesson](data-wrangling-intro-for-hass-7.md).
 [Go back to the start](data-wrangling-intro-for-hass-1.md).
