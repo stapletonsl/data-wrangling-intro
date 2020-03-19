@@ -59,4 +59,4 @@ There is aâ€¯[Google Group](https://groups.google.com/forum/#!forum/openrefine)â
 
 Help is available at Griffith [Hacky Hour](https://hackyhourgriffith.wordpress.com/) sessions, Thursdays between 2-3pm alternating weeks at Gold Coast and Nathan campuses.  Grab a free coffee and we can help you.
 
-[Go to the next part of the lesson](data-wrangling-intro-for-hass-2.md)
+[NEXT](data-wrangling-intro-for-hass-2.md)
