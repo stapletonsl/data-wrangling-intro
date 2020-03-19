@@ -1,55 +1,53 @@
 # Using scripts
 
-*Teaching:* ? minutes
+*Teaching:* 10 minutes
 
-*Exercises:* 0? minutes
-
-
-Objectives
+*Exercises:* 15 minutes
 
 
+## Objectives
 
-How OpenRefine documents changes made to the data
+### How OpenRefine documents changes made to the data
 
-As you conduct your data cleaning and preliminary analysis, OpenRefine saves every change you make to the dataset. These changes are saved in a format known as JSON (JavaScript Object Notation). You can export this JSON script and apply it to other data files. If you had 20 files to clean, and they all had the same type of errors (e.g. misspellings, leading white spaces), and all files had the same column names, you could save the JSON script, open a new file to clean in OpenRefine, paste in the script and run it. This gives you a quick way to clean all your related data.
+As you conduct your data cleaning and preliminary analysis, OpenRefine saves every change you make to the dataset. (Please note that the original dataset remains unchanged - the changes are solely made within OpenRefine and your raw data files are unaffected. Were you to export the changed data at any point, OpenRefine would offer this under a revised filename.)
 
-Save your data wrangling work as a script
+These changes are saved in a format known as JSON (JavaScript Object Notation). You can export this JSON script and apply it to other data files. If you had 20 files to clean, and they all had the same type of errors (e.g., misspellings, leading white spaces), and all files had the same column names, you could save the JSON script, open a new file in OpenRefine, paste in the script, and run it to apply the changes to the new dataset. This gives you a quick way to clean all your related data.
 
-Activity 25
+### Save your data wrangling work as a script
 
-A script is a programming language that enables you to automate the execution of tasks.
+#### Activity 25
 
-Open Undo / Redo tab
+A script is a series of programming steps that facilitate the automatic execution of tasks.
 
-Select Extract...
+- Open `Undo / Redo` tab
 
-Currently all operations you have made to the dataset are highlighted
+- Select `Extract ...`
 
-Select the steps that you want to apply to other datasets by clicking the check boxes.
+Currently all the operations you have made to the dataset are highlighted within the script window.
 
+- Select the steps that you want to apply to other datasets by using the check boxes.
 
+- Copy the code from the right-hand panel and paste it into a text editor (like NotePad on Windows or TextEdit on Mac). 
 
-Copy the code from the right-hand panel and paste it into a text editor (like NotePad on Windows or TextEdit on Mac). Save it as a plain text file.
-In TextEdit, do this by selecting Format > Make plain text and save the file as a .txt file.
+- Save it as a plain text file.
 
-Page Break
+- In TextEdit, do this by selecting `Format > Make plain text` and save the file as a `.txt` file.
 
+### Importing a script to use with another dataset
 
-Importing a script to use with another dataset
+Let's practicse running the script on a new dataset. We'll test this on an uncleaned version of the dataset we've been working with.
 
-Let’s practice running these steps on a new dataset. We’ll test this on an uncleaned version of the dataset we’ve been working with.
+#### Activity 26
 
-Activity 26
+- Create a new project in OpenRefine using the `QLDtrafficAccidentsOpenDataVer1.csv` dataset you downloaded at the start of the workshop (see Activity 5 for help)
 
-Create a new project in OpenRefine using the QLDtrafficAccidentsOpenDataVer1.csv dataset you downloaded at the start of the workshop (see Activity 5 for help)
+- Give the project a different name
 
-Give the project a different name
+- Click the `Undo / Redo tab > Apply`
 
-Click the Undo / Redo tab > Apply
+- Paste in the contents of .txt file you saved.
 
-Paste the contents of .txt file you saved.
-
-Click Perform operations.
+- Click `Perform operations`
 
 The dataset should now be the same as your other cleaned dataset.
 
@@ -57,23 +55,19 @@ For convenience, we used the same dataset.
 
 You could use this process to clean related datasets.
 
-For example, data that you had collected over different time periods or data that was collected by different researchers (provided everyone uses the same column headings).
+For example, you could apply your changes to data that you had collected over different time periods or data that was collected by different researchers (provided everyone uses the same column headings).
 
 The data in this file was generated from a database, so the column headings are pretty much guaranteed to be the same.
 
-Page Break
+# Save & export data from OpenRefine
 
+*Teaching:* 5 minutes
 
-Save & export data from OpenRefine
+*Exercises:* 10 minutes
 
-Teaching: ? min
-Exercises: 0? min
+## Objectives
 
-Objectives
-
-
-
-In OpenRefine you can save or export the cleaned data or the entire project. This means you’re saving the data and all the information about the cleaning and data transformation steps you’ve done. Once you’ve saved a project, you can open it up again and be just where you stopped before.
+In OpenRefine you can save or export the cleaned data or the entire project. Exporting the project as a whole means you are saving the data and all the information about the cleaning and data transformation steps you have done. Once you have saved a project, you can open it up again and pick up where you left off. The options for saving or exporting are:
 
 Save
 
@@ -83,7 +77,7 @@ Export cleaned data
 
 You can export your cleaned data, with different file formats, for use in other tools for analysis.
 
-Activity 27
+#### Activity 27
 
 Click Export in the top right and select the file type you want to export the data in. Tab-separated values (tsv) or Comma-separated values (csv) are good choices, as they are non-proprietary.
 
