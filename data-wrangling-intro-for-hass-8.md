@@ -17,7 +17,7 @@ These changes are saved in a format known as JSON (JavaScript Object Notation). 
 
 #### Activity 25
 
-A script is a series of programming steps that facilitate the automatic execution of tasks.
+A script is a series of programming steps to automate the execution of tasks.
 
 - Open `Undo / Redo` tab
 
@@ -31,17 +31,19 @@ Currently all the operations you have made to the dataset are highlighted within
 
 - Save it as a plain text file.
 
-- In TextEdit, do this by selecting `Format > Make plain text` and save the file as a `.txt` file.
+In TextEdit, do this by selecting `Format > Make plain text` and save the file as a `.txt` file.
 
 ### Importing a script to use with another dataset
 
-Let's practicse running the script on a new dataset. We'll test this on an uncleaned version of the dataset we've been working with.
+Let's practise running the script on a new dataset. We'll test this on an uncleaned version of the dataset we've been working with.
 
 #### Activity 26
 
-- Create a new project in OpenRefine using the `QLDtrafficAccidentsOpenDataVer1.csv` dataset you downloaded at the start of the workshop (see Activity 5 for help)
+- Create a new project in OpenRefine using the `QLDtrafficAccidentsOpenDataVer1.csv` dataset you downloaded at the start of the workshop.
 
-- Give the project a different name
+[See Activity 5 for what to do](data-wrangling-intro-for-hass-1.md).
+
+- Give the project a different name this time
 
 - Click the `Undo / Redo tab > Apply`
 
@@ -69,92 +71,82 @@ The data in this file was generated from a database, so the column headings are 
 
 In OpenRefine you can save or export the cleaned data or the entire project. Exporting the project as a whole means you are saving the data and all the information about the cleaning and data transformation steps you have done. Once you have saved a project, you can open it up again and pick up where you left off. The options for saving or exporting are:
 
-Save
+**Save**
 
-By default, OpenRefine is saving your project continuously. If you close OpenRefine and open it up again, you’ll see a list of your projects. You can click on any one of them to open it up again.
+By default, OpenRefine saves your project continuously. If you close OpenRefine and open it up again, you will see a list of your projects. You can click on any one of them to reopen it.
 
-Export cleaned data
+**Export cleaned data**
 
 You can export your cleaned data, with different file formats, for use in other tools for analysis.
 
 #### Activity 27
 
-Click Export in the top right and select the file type you want to export the data in. Tab-separated values (tsv) or Comma-separated values (csv) are good choices, as they are non-proprietary.
+- Click `Export` in the top right and select the file type for the data export. Tab-separated values (`tsv`) or Comma-separated values (`csv`) are good choices, as they are non-proprietary, but can easily be opened in programs like Excel, R, Python or the Unix shell.
 
-That file will be exported to your default Download directory. That file can then be opened in a spreadsheet program or imported into programs like R or Python.
+Any exported file will be saved to your default `Download` directory. 
 
-Exporting a project
+**Exporting a project**
 
-You can also export the project files. This is helpful if you wanted to send your raw data and cleaning steps to a collaborator, or share the information as a supplement to a publication.
+You can also export project files as a whole. This is helpful if you wanted to send your raw data and cleaning steps to a collaborator, or share the information as a supplement to a publication.
 
-Activity 28
+#### Activity 28
 
-Click the Export button in the top right and select Export project.
+- Click the `Export` button in the top right and select `Export project`.
 
-A tar.gz file will download to your default Download directory. Depending on your browser you may have to confirm that you want to save the file. The downloaded tar.gz file is a folder of files which have been compressed. Linux and Mac machines will have software installed to automatically expand this type of file when you double-click on it. For Windows based machines you may have to install a utility like ‘7-zip’ to expand the file and see the files in the folder.
+A `tar.gz` file will download to your default `Download` directory. Depending on your browser, you may have to confirm that you want to save the file. The downloaded `tar.gz` file is a folder of files which have been compressed. Linux and Mac machines will have software installed to automatically expand this type of file when you double-click on it. For Windows-based machines, you may have to install a utility like '7-zip' to expand the zip file.
 
-After you have expanded the file look at the files that appear in this folder. What files are here? What information do you think these files contain?
+After you have expanded the file, look at the files that appear in this folder. What files are here? What information do you think these files contain?
 
-Solution
+> **Solution**
 
-a history folder which contains a collection of zip files. Each of these files itself contains a change.txt file. These change.txt files are the records of each individual transformation that you did to your data.
+> - a history folder which contains a collection of zip files. Each of these files itself contains a `change.txt` file. 
+> These `change.txt` files are the records of each individual transformation that you performed on your data.
 
-a data.zip file. When expanded, this zip file includes a file called data.txt which is a copy of your raw data. You may also see other files.
+> - a data.zip file. When expanded, this zip file includes a file called `data.txt` which is a copy of your raw data. You may also see other files.
 
+### Support and help
 
+Installing OpenRefine on your own Windows computer may require two things:
 
-Page Break
+- A JAVA install
 
+- Moving the OpenRefine program folder to `C:\program files`. You will need administrator privileges to do that in some cases.
 
-Support and help
+**Windows**
 
-Will send via email after workshop
+- Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
 
-Set up troubleshooting
+- Download the latest software version from [http://openrefine.org](http://openrefine.org). 
 
-Installing OpenRefine in Window OS may require two things
+- Unzip the downloaded file into a directory by right-clicking and selecting `Extract ...`. Name that directory something like OpenRefine.
 
-JAVA install
+- Go to your newly created OpenRefine directory.
 
-Move OpenRefine program folder to c:\program files
+- Move the folder to  `C:\program files`.
 
-Windows
+- Launch OpenRefine by clicking the `openrefine.exe` file (this will launch a command prompt window, but you can ignore that and wait for the browser to launch)
 
-Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
+- If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
 
-Download software version 3.2 from http://openrefine.org 
+### Troubleshooting
 
-Unzip the downloaded file into a directory by right-clicking and selecting “Extract…”. Name that directory something like OpenRefine.
+You may also need to install Java for Windows
 
-Go to your newly created OpenRefine directory.
+- Check if your Windows is 32-bit or 64-bit help via: [https://support.microsoft.com/en-au/help/15056/windows-32-64-bit-faq](https://support.microsoft.com/en-au/help/15056/windows-32-64-bit-faq).
 
-Move the folder to your c:\programs files\
-
-Launch OpenRefine
-
-Click the openrefine.exe (this will launch a command prompt window, but you can ignore that and wait for the browser to launch)
-
-If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
-
-Troubleshooting
-
-you may also need to install Java for Windows
-
-Check if your Windows is 32-bit or 64-bit help via: https://support.microsoft.com/en-au/help/15056/windows-32-64-bit-faq
-
-Select appropriate bit download
+- Select appropriate bit download
 
 (32-bit via: https://www.java.com/en/download/ 
 
 (64-bit  via:  https://www.java.com/en/download/manual.jsp  and
 
-select Windows Offline (64-bit) version
+- Select Windows Offline (64-bit) version
 
-Choose the folder location. Save the file to c:\program files\
+- Choose the folder location. Save the file to c:\program files\
 
-Close all applications including the browser.
+- Close all applications including the browser.
 
-Double-click on the saved file icon to start the installation process
+- Double-click on the saved file icon to start the installation process.
 
 https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program-files-x86-folder/
 
@@ -162,10 +154,9 @@ https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program
 
 ### Going Further
 
-Look at the other options on the Import screen - try changing some of these options and see how that changes the Preview and how the data appears after import.
+Look at the other options on the Import screen - try changing some of these options and see how that changes the `Preview` and how the data appears after import.
 
-Do you have access to JSON or XML data? If so the first stage of the import process will prompt you to select a ‘record path’ - that is the parts of the file that will form the data rows in the OpenRefine project. I have used this process with an xml file of a university’s records from Research Data Australia.
-
+Do you have access to JSON or XML data? If so, the first stage of the import process will prompt you to select a 'record path' - that is, the parts of the file that will form the data rows in the OpenRefine project. 
 
 [Go to the previous part of the lesson](data-wrangling-intro-for-hass-7.md).
 [Go back to the start](data-wrangling-intro-for-hass-1.md).
