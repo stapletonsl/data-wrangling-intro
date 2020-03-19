@@ -51,6 +51,8 @@ When you have finished examining the numeric data, close this facet by clicking 
 
 Note that closing a facet will not undo the edits you have made to the cells in this column.
 
-Use the Undo / Redo function to reverse these changes.
+Use the `Undo / Redo` function to reverse these changes.
 
 
+[Go to the previous part of the lesson](data-wrangling-intro-for-hass-6.md).
+[Go to the next part of the lesson](data-wrangling-intro-for-hass-8.md).
