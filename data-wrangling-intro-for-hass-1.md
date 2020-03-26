@@ -2,29 +2,26 @@
 
 ## Lesson Plan
 
-### Introduction  
+### Introduction and setup 
 
 - *Teaching:* Approximately 10 minutes.
 - *Activities:* 5-10 minutes, depending on download speed of data and learners' skills.
 
 ## Overview of workshop
 
-To introduce data cleaning concepts and the use of the OpenRefine software to clean and standardise data.
+To introduce data cleaning concepts and the use of the [OpenRefine](http://openrefine.org) software to clean and standardise data.
 
-### Before getting started
+### Background
 
-OpenRefine is a [Java](https://www.java.com/en/)-based program that runs on your computer (not online).
+[OpenRefine](http://openrefine.org) is a [Java](https://www.java.com/en/)-based program that runs on your computer (not online).
 
-It runs inside your Web browser, but no web connection is needed to use it, unless you want to bring in Web-based data for cleaning. Once data has been read into OpenRefine, however, no further connection is needed to begin working with it.
+It runs inside your Web browser, but no web connection is needed to use it, unless you want to bring in Web-based data for cleaning. Once data has been read into OpenRefine, however, no further connection is needed work with it.
 
 ### Features of OpenRefine
 
-- Open source collaboratively developed software (source code is on GitHub)
-
+- Open source collaboratively developed software ([OpenRefine](http://openrefine.org) source code is housed on [GitHub](https://https://github.com/)
 - A growing community of users worldwide, from novice to expert, ready to help.
-
-- Works with large-ish datasets > 100,000 rows.
-
+- Works with large datasets, i.e. those greater than 100,000 rows.
 - Can adjust memory allocation to accommodate larger datasets.
 
 ### Things you can use OpenRefine for
@@ -39,6 +36,11 @@ It runs inside your Web browser, but no web connection is needed to use it, unle
 - Tracking changes made to data
 - Changing case within a column
 - Exporting the steps as a reusable script
+
+### Getting the software for the lesson
+
+Download the software from this site [OpenRefine](http://openrefine.org/downloads).
+Install it.
 
 ### Getting the data for the lesson
 
@@ -59,4 +61,4 @@ There is aâ€¯[Google Group](https://groups.google.com/forum/#!forum/openrefine)â
 
 Help is available at Griffith [Hacky Hour](https://hackyhourgriffith.wordpress.com/) sessions, Thursdays between 2-3pm alternating weeks at Gold Coast and Nathan campuses.  Grab a free coffee and we can help you.
 
-[NEXT](data-wrangling-intro-for-hass-2.md)
+[NEXT -->](data-wrangling-intro-for-hass-2.md)
