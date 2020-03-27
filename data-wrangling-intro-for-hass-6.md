@@ -163,7 +163,4 @@ Let's edite the column headings to represent the data more accurately.
 
 - Repeat the process for `Suburb_PostCode 2` to rename the column to `Postcode`.
 
-[Go to the next part of the lesson](data-wrangling-intro-for-hass-7.md).
-
-[Go to the previous part of the lesson](data-wrangling-intro-for-hass-5.md).
-
+[<-- BACK](data-wrangling-intro-for-hass-5.md) | [NEXT -->](data-wrangling-intro-for-hass-7.md).
