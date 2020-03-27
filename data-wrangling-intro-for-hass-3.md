@@ -48,6 +48,6 @@ Projects are saved automatically as you work on them,  so there is no need to sa
 To open an existing project in OpenRefine, click **Open Project** from the main OpenRefine screen (in the left-hand menu). 
 When you click this, you will see a list of the existing projects and can click on a project's name to open it.
 
-[Go to the next part of the lesson](data-wrangling-intro-for-hass-4.md).
+[<-- BACK](data-wrangling-intro-for-hass-2.md) | [NEXT -->](data-wrangling-intro-for-hass-4.md).
 
-[Go to the previous part of the lesson](data-wrangling-intro-for-hass-2.md).
+
