@@ -177,6 +177,4 @@ Close the facet.
 
 Detailed information on the different clustering algorithms and combinations is available here: [https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth](https://github.com/OpenRefine/OpenRefine/wiki/Clustering-In-Depth).
 
-[Go to the next part of the lesson](data-wrangling-intro-for-hass-5.md).
-
-[Go to the previous part of the lesson](data-wrangling-intro-for-hass-3.md).
+[<-- BACK](data-wrangling-intro-for-hass-3.md) | [NEXT -->](data-wrangling-intro-for-hass-5.md).
