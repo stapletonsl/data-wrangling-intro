@@ -53,4 +53,4 @@ Note that closing a facet will not undo the edits you have made to the cells in 
 
 Use the `Undo / Redo` function to reverse these changes.
 
-[<-- BACK](data-wrangling-intro-for-hass-6.md). | [NEXT -->](data-wrangling-intro-for-hass-8.md)
+[<-- BACK](data-wrangling-intro-for-hass-6.md) | [NEXT -->](data-wrangling-intro-for-hass-8.md)
