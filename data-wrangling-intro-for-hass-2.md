@@ -58,4 +58,4 @@ If all looks fine, click **Create Project**.
 - Use the **Create Project** option to import new data to work on.
 - You can control how data is imported b y changing options on the import screen.
 
-[<-- BACK](data-wrangling-intro-for-hass-1.md) | [NEXT -->](data-wrangling-intro-for-hass-3.md) 
+[<-- BACK](data-wrangling-intro-for-hass-1.md)   |   [NEXT -->](data-wrangling-intro-for-hass-3.md) 
