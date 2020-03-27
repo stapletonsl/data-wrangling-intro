@@ -125,6 +125,4 @@ Copy and paste `Crash_Longitude` value to the record missing the value.
 
 OpenRefine provides a way to sort and filter data without affecting or changing the raw data.
 
-[Go to the next part of the lesson](data-wrangling-intro-for-hass-6.md).
-
-[Go to the previous part of the lesson](data-wrangling-intro-for-hass-4.md).
+[<-- BACK](data-wrangling-intro-for-hass-4.md) | [NEXT -->](data-wrangling-intro-for-hass-6.md).
