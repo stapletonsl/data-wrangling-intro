@@ -84,35 +84,22 @@ https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program
 - Download latest software version from [http://openrefine.org](http://openrefine.org)
 - Drag icon into Applications folder
 - Doubleclick to launch OpenRefine
+- If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at
+  http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
+  
+### Troubleshooting
+- If OpenRefine doesn’t open due to security settings go to:
+  - System Preferences> security & privacy > see message re: OpenRefine
+  - select Open anyway
+
+**Linux**
+- Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
+- Download the latest software version from [http://openrefine.org](http://openrefine.org). 
+- Unzip the downloaded file into a directory. Name that directory something like OpenRefine.
+- Go to your newly created OpenRefine directory.
+- Launch OpenRefine
+-Type ./refine into the terminal within the OpenRefine directory
 - If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
-
-
-    Trouble shooting
-
-    If OpenRefine doesn’t open due to security settings go to:
-
-    System Preferences> security & privacy > see message re: OpenRefine
-
-    select Open anyway
-
-
-
-Linux
-
-    Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
-
-    Download software from http://openrefine.org
-
-    Unzip the downloaded file into a directory. Name that directory something like OpenRefine.
-
-    Go to your newly created OpenRefine directory.
-
-
-    Launch OpenRefine
-
-    Type  ./refine into the terminal within the OpenRefine directory
-
-    If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
 
 ### Getting the data for the lesson
 
