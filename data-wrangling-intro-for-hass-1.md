@@ -71,7 +71,7 @@ You may also need to install Java for Windows
   - 64-bit  via:  https://www.java.com/en/download/manual.jsp  and
     Select Windows Offline (64-bit) version
 
-- Choose the folder location. Save the file to c:\program files\
+- Choose the folder location. Save the file to `c:\program files\`
 
 - Close all applications including the browser.
 
@@ -82,14 +82,14 @@ https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program
 **Mac**
 - Check that you have Firefox or Chrome browsers installed and set as your default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
 - Download latest software version from [http://openrefine.org](http://openrefine.org)
-- Drag icon into Applications folder
+- Drag icon into `Applications folder`
 - Doubleclick to launch OpenRefine
 - If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at
   http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
   
 ### Troubleshooting
 - If OpenRefine doesn’t open due to security settings go to:
-  - System Preferences> security & privacy > see message re: OpenRefine
+  - `System Preferences> security & privacy >` see message re: OpenRefine
   - select Open anyway
 
 **Linux**
@@ -98,13 +98,13 @@ https://www.howtogeek.com/129178/why-does-64-bit-windows-need-a-separate-program
 - Unzip the downloaded file into a directory. Name that directory something like OpenRefine.
 - Go to your newly created OpenRefine directory.
 - Launch OpenRefine
--Type ./refine into the terminal within the OpenRefine directory
+-Type `./refine` into the terminal within the OpenRefine directory
 - If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
 
 ### Getting the data for the lesson
 
 Download the `QLDtrafficAccidentsOpenDataVer1.csv` dataset from this [website](https://research-storage.griffith.edu.au/owncloud/index.php/s/NphyCS2OvSIZe8E)
-to your **Downloads** folder. We will then import that data into OpenRefine.
+to your `Downloads` folder. We will then import that data into OpenRefine.
 
 Alternately, when you launch OpenRefine, you can import the data directly from a Web address using this link [https://raw.githubusercontent.com/stapletonsl/ClassData2020/master/QLDtrafficAccidentsOpenDataVer1.csv](https://raw.githubusercontent.com/stapletonsl/ClassData2020/master/QLDtrafficAccidentsOpenDataVer1.csv)
 
